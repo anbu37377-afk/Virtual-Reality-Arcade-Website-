@@ -15,7 +15,23 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         /* Dashboard Specific Inline Overrides to ensure single-file simplicity works */
-        /* Note: Most dashboard styles are in style.css under .sidebar class */
+        .sidebar-brand {
+            font-size: 1.5rem !important;
+            /* Match Navbar Brand Size */
+            color: var(--text-color) !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .sidebar-brand span {
+            color: var(--primary-color);
+        }
+
+        .sidebar-brand i {
+            font-size: 1.5rem;
+        }
     </style>
 </head>
 
@@ -26,7 +42,7 @@
         <!-- SIDEBAR -->
         <aside class="sidebar d-flex flex-column">
             <a href="index.html" class="sidebar-brand">
-                <i class="bi bi-headset-vr"></i> VR DASH
+                <i class="bi bi-headset-vr text-gradient"></i> VR <span>ARCADE</span>
             </a>
 
             <ul class="sidebar-menu flex-grow-1">
