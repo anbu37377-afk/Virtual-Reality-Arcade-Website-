@@ -13,11 +13,32 @@
     <link rel="stylesheet" href="assets/css/fixed-header.css">
     <style>
         .hero-home-2 {
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), transparent), url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=2070&auto=format');
-            background-size: cover;
-            background-position: center top;
-            background-repeat: no-repeat;
+            position: relative;
+            background-color: #08090d;
             min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        /* Responsive adjustments for desktop (Web view) */
+        @media (min-width: 992px) {
+            .hero-home-2 {
+                padding-top: 160px;
+            }
+        }
+
+        /* Responsive adjustments for tablet and mobile */
+        @media (max-width: 991.98px) {
+            .hero-home-2 {
+                padding: 140px 0 80px;
+                text-align: center;
+            }
+
+            .hero-home-2 .display-1 {
+                font-size: calc(1.625rem + 4.5vw);
+            }
         }
     </style>
 </head>
@@ -132,17 +153,17 @@
         <!-- Hero Section -->
         <section class="hero-home-2 d-flex align-items-center">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
                         <span class="text-secondary text-uppercase letter-spacing-2 fw-bold mb-2 d-block">Experimental
                             Zone</span>
                         <h1 class="display-1 fw-bold text-white mb-4">Mixed <br><span
                                 class="text-gradient">Reality</span></h1>
-                        <p class="lead text-white-50 mb-5">
+                        <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 700px;">
                             Step beyond games. Experience art, travel, and education in our dedicated Mixed Reality Lab.
                             A quieter, more focused VR experience.
                         </p>
-                        <div class="d-flex gap-3">
+                        <div class="d-flex gap-3 justify-content-center">
                             <a href="services.html" class="btn btn-outline-light rounded-pill px-5 py-3">Discover</a>
                             <a href="pricing.html" class="btn btn-primary rounded-pill px-5 py-3">Book Session</a>
                         </div>
