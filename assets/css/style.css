@@ -787,12 +787,31 @@ a {
     color: rgba(226, 232, 255, 0.62) !important;
 }
 
+[data-bs-theme="light"] .pricing-page .pricing-offer-card {
+    background-color: rgba(140, 82, 255, 0.08) !important;
+    border: 1px solid rgba(140, 82, 255, 0.2) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
 [data-bs-theme="light"] .pricing-page .pricing-offer-card .text-white {
-    color: #1f2937 !important;
+    color: #0b0c15 !important;
+    /* Use dark theme background color for text instead of white */
+}
+
+[data-bs-theme="light"] .pricing-page .pricing-offer-card h3.text-white {
+    color: var(--primary-color) !important;
+    /* Brand color for the heading */
 }
 
 [data-bs-theme="light"] .pricing-page .pricing-offer-card .text-muted {
-    color: #4b5563 !important;
+    color: #1f2937 !important;
+    /* Darker grey for muted text */
+}
+
+[data-bs-theme="light"] .pricing-page .pricing-offer-card span.text-white {
+    color: #000000 !important;
+    border-bottom: 2px solid var(--primary-color);
+    /* Add a subtle underline to highlights */
 }
 
 .blog-hero-section {
@@ -1015,13 +1034,11 @@ a {
     top: 0;
 }
 
-/* Custom Container for Wide Layout */
+/* Custom Container for Balanced Layout */
 .navbar>.container {
     max-width: 100% !important;
     padding-left: 2rem !important;
-    /* Balanced padding for smaller logo */
-    padding-right: 7rem !important;
-    /* Pulls Sign Up button significantly inwards */
+    padding-right: 2rem !important;
 }
 
 @media (max-width: 991px) {
@@ -1382,11 +1399,11 @@ a {
    4. HERO SECTION
    ========================================= */
 .hero-section {
-    padding: 100px 0;
-    background: #0b0c15 linear-gradient(135deg, rgba(11, 12, 21, 0.7), rgba(140, 82, 255, 0.1)), url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=2070&auto=format');
-    background-size: contain !important;
+    padding: 60px 0;
+    background: linear-gradient(135deg, rgba(11, 12, 21, 0.82), rgba(140, 82, 255, 0.25)), url('https://images.ctfassets.net/3dar4x4x74wk/4ybhyhyOS1G0ffJlAIaWRm/6fe1dabc24001dadeb6e6dba94e69f02/VR.jpg');
+    background-size: cover !important;
     background-repeat: no-repeat !important;
-    background-position: center !important;
+    background-position: center center !important;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -1395,10 +1412,10 @@ a {
 }
 
 [data-bs-theme="light"] .hero-section {
-    background: #0b0c15 linear-gradient(135deg, rgba(248, 249, 250, 0.1), rgba(140, 82, 255, 0.2)), url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=2070&auto=format');
-    background-size: contain !important;
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.82), rgba(140, 82, 255, 0.25)), url('https://images.ctfassets.net/3dar4x4x74wk/4ybhyhyOS1G0ffJlAIaWRm/6fe1dabc24001dadeb6e6dba94e69f02/VR.jpg');
+    background-size: cover !important;
     background-repeat: no-repeat !important;
-    background-position: center !important;
+    background-position: center center !important;
 }
 
 [data-bs-theme="light"] .hero-title {
@@ -1478,13 +1495,24 @@ a {
 }
 
 .sidebar-brand {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
-    color: var(--primary-color);
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: var(--text-color) !important;
     margin-bottom: 30px;
-    display: block;
-    text-align: center;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none !important;
+}
+
+.sidebar-brand span {
+    color: var(--primary-color) !important;
+}
+
+.sidebar-brand i {
+    font-size: 1.6rem !important;
 }
 
 .sidebar-menu {
@@ -2041,6 +2069,15 @@ main {
     box-shadow: 0 0 30px rgba(140, 82, 255, 0.6);
 }
 
+/* Hide floating trigger and panel on desktop to prevent artifacts */
+@media (min-width: 992px) {
+
+    .antigravity-menu-trigger,
+    .antigravity-panel {
+        display: none !important;
+    }
+}
+
 .antigravity-menu-trigger i {
     font-size: 2rem !important;
     line-height: 1;
@@ -2061,8 +2098,8 @@ main {
     z-index: 999;
     /* Lower than footer to allow footer interaction */
     border-radius: 20px !important;
-    visibility: visible !important;
-    transition: transform 300ms ease-out !important;
+    visibility: hidden;
+    transition: transform 300ms ease-out, visibility 300ms !important;
     box-sizing: border-box;
 }
 
@@ -2072,6 +2109,7 @@ main {
 
 .antigravity-panel.offcanvas-end.show {
     transform: none !important;
+    visibility: visible !important;
 }
 
 /* Ensure no backdrop dimming or scroll locking */

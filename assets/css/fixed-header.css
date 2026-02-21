@@ -1,10 +1,5 @@
 /* FIXED HEADER SOLUTION - FINAL V6 (SCROLLBAR FIX) */
 
-/* 0. SCROLLBAR OVERLAP FIX */
-html {
-    scrollbar-gutter: stable;
-}
-
 /* 1. RESET & SAFETY */
 header,
 .site-header,
@@ -31,8 +26,8 @@ header,
 
 /* 3. CONTENT SPACING (PUSH DOWN) */
 body {
-    padding-top: 100px !important;
-    /* 80px header + 20px gap */
+    padding-top: 80px !important;
+    /* Exactly 80px header height, no extra gap */
     position: relative !important;
     z-index: 0 !important;
 }
