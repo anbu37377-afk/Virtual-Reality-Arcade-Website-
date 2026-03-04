@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const sidebarLinks = document.querySelectorAll('.sidebar-menu a');
     sidebarLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (window.innerWidth < 992) {
+            if (window.innerWidth < 1200) {
                 closeSidebar();
             }
         });
@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Ensure sidebar state is reset when screen size changes
     window.addEventListener('resize', () => {
-        if (window.innerWidth >= 992) {
+        if (window.innerWidth >= 1200) {
             closeSidebar();
         }
     });
 
-    if (window.innerWidth < 992) {
+    if (window.innerWidth < 1200) {
         closeSidebar();
     }
 

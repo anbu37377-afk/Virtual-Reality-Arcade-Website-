@@ -990,7 +990,7 @@ a {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .pricing-page .pricing-plans-row .pricing-plan-card {
         padding: 1.5rem !important;
     }
@@ -1045,7 +1045,7 @@ a {
     padding-right: 2rem !important;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .navbar>.container {
         padding-left: 1.5rem !important;
         padding-right: 1.5rem !important;
@@ -1212,8 +1212,8 @@ a {
     box-shadow: 0 8px 20px rgba(0, 229, 255, 0.3);
 }
 
-/* Tablet/Laptop Landscape Navigation Fix (992px - 1350px) */
-@media (min-width: 992px) and (max-width: 1350px) {
+/* Tablet/Laptop Landscape Navigation Fix (1200px - 1350px) */
+@media (min-width: 1200px) and (max-width: 1350px) {
     .navbar>.container {
         max-width: 98% !important;
         padding-right: 2.5rem !important;
@@ -1244,8 +1244,8 @@ a {
     }
 }
 
-/* Mobile Adjustments (< 992px) */
-@media (max-width: 991.98px) {
+/* Mobile Adjustments (< 1200px) */
+@media (max-width: 1199.98px) {
     .auth-buttons-desktop {
         display: none !important;
     }
@@ -1606,7 +1606,7 @@ a {
     transform: scale(0.95);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .sidebar {
         width: min(82vw, 300px);
         left: 0;
@@ -1655,7 +1655,7 @@ a {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .sidebar {
         transform: translateX(0) !important;
     }
@@ -2074,7 +2074,7 @@ main {
 }
 
 /* Hide floating trigger and panel on desktop to prevent artifacts */
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
 
     .antigravity-menu-trigger,
     .antigravity-panel {
@@ -2304,7 +2304,7 @@ body.offcanvas-open {
 }
 
 /* Hide original navbar elements on mobile if needed */
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .navbar .container>.navbar-toggler:not(.antigravity-menu-trigger) {
         display: none !important;
     }

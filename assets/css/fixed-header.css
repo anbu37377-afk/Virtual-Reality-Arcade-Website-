@@ -60,7 +60,7 @@ section,
 }
 
 /* Desktop state: Restore visibility and interaction */
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .navbar-collapse {
         display: flex !important;
         opacity: 1 !important;
